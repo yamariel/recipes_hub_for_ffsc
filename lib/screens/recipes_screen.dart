@@ -37,7 +37,7 @@ class _RecipesScreenState extends State<RecipesScreen> {
 
     return Scaffold(
       appBar: AppBar(
-          title: Text("Toutes les catégories"),
+          title: Text("Toutes les recettes"),
       ),
       body: Column(
         children: [
