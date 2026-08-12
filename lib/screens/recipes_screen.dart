@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:go_router/go_router.dart';
 import '../data/recipe_data.dart';
 import '../models/recipe.dart';
 import '../widgets/recipe_card.dart';
@@ -83,12 +83,17 @@ class _RecipesScreenState extends State<RecipesScreen> {
                   gridDelegate:  const SliverGridDelegateWithMaxCrossAxisExtent(
                     maxCrossAxisExtent: 300,
                     childAspectRatio: 0.75,
-                    crossAxisSpacing: 16,
-                    mainAxisSpacing: 16
+                    crossAxisSpacing: 24,
+                    mainAxisSpacing: 30
                   ),
                   itemBuilder: (context, index) {
                     final recipe =  filteredRecipes[index];
-                    return RecipeCard(recipe: recipe);
+                    return RecipeCard(
+                        recipe: recipe,
+                        onTap: () {
+                          context.push('/recipe', extra: recipe);
+                        }
+                    );
                   }
               )
           ),
