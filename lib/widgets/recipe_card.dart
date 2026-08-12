@@ -8,56 +8,70 @@ class RecipeCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: const EdgeInsets.only(bottom: 12),
-      child: Padding(
-        padding: const EdgeInsets.all(12),
-        child: Row(
-          children: [
-            Container(
-              width: 100,
-              height: 100,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                color: Colors.grey.shade300,
-              ),
-              child: Image.network(recipe.image, fit: BoxFit.cover),
+      clipBehavior: Clip.antiAlias,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Expanded(
+            flex: 5,
+            child: Image.network(
+              recipe.image,
+              width: double.infinity,
+              fit: BoxFit.cover,
             ),
-            const SizedBox(width: 16),
-            Expanded(
+          ),
+
+          Expanded(
+            flex: 4,
+            child: Padding(
+              padding: const EdgeInsets.all(12),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     recipe.title,
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
+
                   const SizedBox(height: 6),
-                  Text(recipe.description),
-                  const SizedBox(height: 6),
+
+                  Expanded(
+                    child: Text(
+                      recipe.description,
+                      maxLines: 3,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
+
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Row(
-                        children: [
-                          const Icon(Icons.timer, size: 16),
-                          const SizedBox(width: 6),
-                          Text('${recipe.preparationTime} min'),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          const Icon(Icons.category, size: 16),
-                          const SizedBox(width: 6),
-                          Text(recipe.category),
-                        ],
+                      const Icon(Icons.timer, size: 16),
+                      const SizedBox(width: 4),
+                      Text('${recipe.preparationTime} min'),
+
+                      const Spacer(),
+
+                      const Icon(Icons.category, size: 16),
+                      const SizedBox(width: 4),
+                      Flexible(
+                        child: Text(
+                          recipe.category,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                        ),
                       ),
                     ],
                   ),
                 ],
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
