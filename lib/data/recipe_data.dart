@@ -6,7 +6,7 @@ final List<Recipe> recipes = [
     title: 'Pizza Margherita',
     description: 'Une pizza italienne classique à la tomate et mozzarella.',
     category: 'Plats',
-    image: 'https://picsum.photos/200/300',
+    image: 'https://www.easypeasyfoodie.com/wp-content/uploads/2024/07/Easy-Cheese-and-Tomato-Pizza-Hero-768x768.jpg',
     preparationTime: 30,
     ingredients: [
       'Farine',
@@ -21,7 +21,7 @@ final List<Recipe> recipes = [
     title: 'Salade César',
     description: 'Une salade fraîche avec poulet, salade et sauce César.',
     category: 'Salades',
-    image: 'https://picsum.photos/200/300',
+    image: 'https://www.yumelise.fr/wp-content/uploads/2023/06/salade-cesar-recette.jpg',
     preparationTime: 20,
     ingredients: [
       'Salade',
@@ -36,7 +36,7 @@ final List<Recipe> recipes = [
     title: 'Tiramisu',
     description: 'Un dessert italien crémeux au café et mascarpone.',
     category: 'Desserts',
-    image: 'https://picsum.photos/200/300',
+    image: 'https://www.giallozafferano.com/images/260-26067/Tiramisu_780x520_wm.jpg',
     preparationTime: 40,
     ingredients: [
       'Mascarpone',
