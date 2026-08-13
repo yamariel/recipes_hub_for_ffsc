@@ -35,7 +35,7 @@ class RecipeCard extends StatelessWidget {
                     children: [
                       Text(
                         recipe.title,
-                        maxLines: 2,
+                        maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
                           fontSize: 16,
@@ -48,10 +48,11 @@ class RecipeCard extends StatelessWidget {
                       Expanded(
                         child: Text(
                           recipe.description,
-                          maxLines: 3,
+                          maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                         ),
                       ),
+                      const Spacer(),
 
                       Row(
                         children: [
@@ -59,7 +60,7 @@ class RecipeCard extends StatelessWidget {
                           const SizedBox(width: 4),
                           Text('${recipe.preparationTime} min'),
 
-                          const Spacer( flex: 4,),
+                          const Spacer(flex: 4),
 
                           const Icon(Icons.category, size: 16),
                           const SizedBox(width: 4),
