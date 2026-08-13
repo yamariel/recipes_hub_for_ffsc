@@ -21,8 +21,7 @@ class _AddRecipeScreenState extends State<AddRecipeScreen> {
 
   final List<String> _ingredients = [];
 
-  final TextEditingController _ingredientController =
-  TextEditingController();
+  final TextEditingController _ingredientController = TextEditingController();
 
   @override
   void dispose() {
@@ -50,9 +49,7 @@ class _AddRecipeScreenState extends State<AddRecipeScreen> {
 
     if (_ingredients.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Ajoutez au moins un ingrédient.'),
-        ),
+        const SnackBar(content: Text('Ajoutez au moins un ingrédient.')),
       );
       return;
     }
@@ -61,10 +58,8 @@ class _AddRecipeScreenState extends State<AddRecipeScreen> {
 
     final newId = recipes.isEmpty
         ? 1
-        : recipes.map((recipe) => recipe.id).reduce(
-          (a, b) => a > b ? a : b,
-    ) +
-        1;
+        : recipes.map((recipe) => recipe.id).reduce((a, b) => a > b ? a : b) +
+              1;
 
     final newRecipe = Recipe(
       id: newId,
@@ -79,9 +74,7 @@ class _AddRecipeScreenState extends State<AddRecipeScreen> {
     recipes.add(newRecipe);
 
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Recette ajoutée avec succès !'),
-      ),
+      const SnackBar(content: Text('Recette ajoutée avec succès !')),
     );
 
     context.pop();
@@ -90,9 +83,7 @@ class _AddRecipeScreenState extends State<AddRecipeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Ajouter une recette'),
-      ),
+      appBar: AppBar(title: const Text('Ajouter une recette')),
 
       body: Form(
         key: _formKey,
@@ -103,7 +94,6 @@ class _AddRecipeScreenState extends State<AddRecipeScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
               TextFormField(
                 decoration: const InputDecoration(
                   labelText: 'Nom de la recette',
@@ -232,10 +222,7 @@ class _AddRecipeScreenState extends State<AddRecipeScreen> {
 
               const Text(
                 'Ingrédients',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
 
               const SizedBox(height: 10),
@@ -267,19 +254,17 @@ class _AddRecipeScreenState extends State<AddRecipeScreen> {
                 spacing: 8,
                 runSpacing: 8,
 
-                children: _ingredients.map(
-                      (ingredient) {
-                    return Chip(
-                      label: Text(ingredient),
+                children: _ingredients.map((ingredient) {
+                  return Chip(
+                    label: Text(ingredient),
 
-                      onDeleted: () {
-                        setState(() {
-                          _ingredients.remove(ingredient);
-                        });
-                      },
-                    );
-                  },
-                ).toList(),
+                    onDeleted: () {
+                      setState(() {
+                        _ingredients.remove(ingredient);
+                      });
+                    },
+                  );
+                }).toList(),
               ),
 
               const SizedBox(height: 24),
