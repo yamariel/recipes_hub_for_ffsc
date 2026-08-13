@@ -45,7 +45,7 @@ Le projet a été réalisé dans le cadre d'une certification Flutter portant su
 ### Thème
 - Prise en charge du thème clair
 - Prise en charge du thème sombre
-  ![Mode sombre](screenshots/dark_mode.webp)
+  <img src="screenshots/dark_mode.webp" alt="Mode sombre" width="400">
 
 ---
 
