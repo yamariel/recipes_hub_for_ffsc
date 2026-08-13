@@ -15,7 +15,7 @@ Le projet a été réalisé dans le cadre d'une certification Flutter portant su
 - Accès rapide aux recettes
 - Affichage des recettes populaires
 - Navigation vers les différentes fonctionnalités
-  ![Accueil](screenshots/home.png)
+  ![Accueil](screenshots/home.webp)
 
 ### Liste des recettes
 - Affichage des recettes sous forme de grille
@@ -23,7 +23,7 @@ Le projet a été réalisé dans le cadre d'une certification Flutter portant su
 - Filtrage par catégorie
 - Affichage d'un message lorsqu'aucune recette ne correspond
 - Adaptation de la grille selon la taille de l'écran
-  ![Recettes](screenshots/recipes.png)
+  ![Recettes](screenshots/recipes.webp)
 
 ### Détail d'une recette
 - Affichage de l'image
@@ -32,7 +32,7 @@ Le projet a été réalisé dans le cadre d'une certification Flutter portant su
 - Catégorie
 - Temps de préparation
 - Liste des ingrédients
-  ![Détails d'une recette](screenshots/details.png)
+  ![Détails d'une recette](screenshots/details.webp)
 - 
 ### Ajouter une recette
 - Formulaire de création de recette
@@ -40,12 +40,12 @@ Le projet a été réalisé dans le cadre d'une certification Flutter portant su
 - Ajout dynamique des ingrédients
 - Suppression d'un ingrédient
 - Ajout de la recette à la liste
-  ![Ajouter une recette](screenshots/add_recipe.png)
+  ![Ajouter une recette](screenshots/add_recipe.webp)
 
 ### Thème
 - Prise en charge du thème clair
 - Prise en charge du thème sombre
-  ![Mode sombre](screenshots/dark_mode.png)
+  ![Mode sombre](screenshots/dark_mode.webp)
 
 ---
 
@@ -105,11 +105,11 @@ lib/
 └── main.dart
 |
 │screenshots/
-    ├── home.png
-    ├── recipes.png
-    ├── detail.png
-    ├── add_recipe.png
-    └── dark_mode.png
+    ├── home.webp
+    ├── recipes.webp
+    ├── detail.webp
+    ├── add_recipe.webp
+    └── dark_mode.webp
 ````
 # Technologies utilisées
 - Flutter
