@@ -38,7 +38,7 @@ class RecipeDetailScreen extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 16),
-                  Row(
+                  Wrap(
                     children: [
                       Text(recipe.description, style: TextStyle(fontSize: 16)),
                     ],
