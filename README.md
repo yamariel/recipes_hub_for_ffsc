@@ -15,7 +15,7 @@ Le projet a été réalisé dans le cadre d'une certification Flutter portant su
 - Accès rapide aux recettes
 - Affichage des recettes populaires
 - Navigation vers les différentes fonctionnalités
-  ![Accueil](screenshots/home.webp)
+  <img src="screenshots/home.webp" alt="Accueil" width="400">
 
 ### Liste des recettes
 - Affichage des recettes sous forme de grille
@@ -23,7 +23,7 @@ Le projet a été réalisé dans le cadre d'une certification Flutter portant su
 - Filtrage par catégorie
 - Affichage d'un message lorsqu'aucune recette ne correspond
 - Adaptation de la grille selon la taille de l'écran
-  ![Recettes](screenshots/recipes.webp)
+  <img src="screenshots/recipes.webp" alt="Liste des recettes" width="400">
 
 ### Détail d'une recette
 - Affichage de l'image
@@ -32,7 +32,7 @@ Le projet a été réalisé dans le cadre d'une certification Flutter portant su
 - Catégorie
 - Temps de préparation
 - Liste des ingrédients
-  ![Détails d'une recette](screenshots/details.webp)
+  <img src="screenshots/details.webp" alt="Détail d'une recette" width="400">
 - 
 ### Ajouter une recette
 - Formulaire de création de recette
@@ -40,7 +40,7 @@ Le projet a été réalisé dans le cadre d'une certification Flutter portant su
 - Ajout dynamique des ingrédients
 - Suppression d'un ingrédient
 - Ajout de la recette à la liste
-  ![Ajouter une recette](screenshots/add_recipe.webp)
+  <img src="screenshots/add_recipe.webp" alt="Ajouter une recette" width="400">
 
 ### Thème
 - Prise en charge du thème clair
