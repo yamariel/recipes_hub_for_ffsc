@@ -30,6 +30,7 @@ class HomeScreen extends StatelessWidget {
                   ? Icons.dark_mode
                   : Icons.light_mode,
             ),
+            tooltip: "Changer le thème",
           ),
         ],
       ),
