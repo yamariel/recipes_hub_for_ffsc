@@ -23,6 +23,7 @@ class RecipeCard extends StatelessWidget {
                   recipe.image,
                   width: double.infinity,
                   fit: BoxFit.cover,
+                  errorBuilder: (context, error, stackTrace) => const Center(child: Icon(Icons.error)),
                 ),
               ),
 

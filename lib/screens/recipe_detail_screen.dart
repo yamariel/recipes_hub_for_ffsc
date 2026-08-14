@@ -13,7 +13,13 @@ class RecipeDetailScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.network(recipe.image, width: double.infinity, height: 280),
+            Image.network(
+                recipe.image,
+                width: double.infinity,
+                height: 280,
+                fit: BoxFit.cover,
+                errorBuilder: (context, error, stackTrace) => const Center(child: Icon(Icons.error)),
+            ),
             Padding(
               padding: const EdgeInsets.all(16),
               child: Column(
