@@ -172,10 +172,15 @@ class _AddRecipeScreenState extends State<AddRecipeScreen> {
                   hintText: 'Entrez l\'URL de l\'image',
                   border: OutlineInputBorder(),
                 ),
-
                 validator: (value) {
                   if (value == null || value.trim().isEmpty) {
                     return 'Veuillez entrer une URL';
+                  }
+
+                  final uri = Uri.tryParse(value.trim());
+
+                  if (uri == null || !uri.hasScheme || !uri.hasAuthority) {
+                    return 'Veuillez entrer une URL valide';
                   }
 
                   return null;
